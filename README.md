@@ -11,7 +11,7 @@ cd dnscat2/server
 bundle
 
 # Extract requests as text
-$ tshark -r suspicious.pcap -Tfields -e dns.qry.name | grep . | grep domain > dnscat-data.txt
+$ tshark -r suspicious.pcap -Tfields -e dns.qry.name | grep . | grep mydomain > dnscat-data.txt
 
 # Pipe it to this script
 $ cat dnscat-data.txt | ruby decoder.rb mydomain
