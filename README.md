@@ -4,11 +4,11 @@
 
 ```bash
 # Clone the repo with submodules
-git clone --recursive git@github.com:jsborjesson/dnscat2-decoder.git
+$ git clone --recursive git@github.com:jsborjesson/dnscat2-decoder.git
 
 # You may need to run bundle in dnscat2 to get its dependencies
-cd dnscat2/server
-bundle
+$ cd dnscat2/server
+$ bundle
 
 # Extract requests as text
 $ tshark -r suspicious.pcap -Tfields -e dns.qry.name | grep . | grep mydomain > dnscat-data.txt
