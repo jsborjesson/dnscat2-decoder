@@ -18,7 +18,7 @@ def display_packet(p)
   when Packet::MESSAGE_TYPE_SYN
     puts p.body.name
   when Packet::MESSAGE_TYPE_MSG
-    print p.body.data if p.session_id
+    print p.body.data
   else
     # puts p
   end
